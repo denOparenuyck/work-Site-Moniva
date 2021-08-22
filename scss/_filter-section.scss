@@ -1,0 +1,118 @@
+.filter-section{
+    background: rgba(38, 12, 46, 0.9);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    transform: translateY(100%);
+    transition: transform 1s;
+
+    .spare-part-left-side{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 86%;
+        overflow-y: scroll;
+    }
+    .spare-part-left-side__block-slider{
+        width: 30%;
+    }
+    .spare-part-left-side__block-price-area{
+        width: 40%;
+    }
+    .spare-part-left-side__block-list{
+        width: 50%;
+    }
+    .spare-part-left-side__block-buttons{
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        background: #e2e2e2;
+        box-shadow: 0px 4px 6px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        padding: 41px 39px 32px 51px;
+    }
+    .spare-part-left-side__block-button:first-child{
+        margin-bottom: 20px;
+    }
+}
+
+.filter-section--active{
+    transform: translateY(0);
+    width: 100%;
+    height: 100%;
+}
+
+.filter-section__close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+
+
+@media(max-width:830px){
+    .filter-section .spare-part-left-side__block-slider{
+        width: 40%;
+    }
+    .filter-section .spare-part-left-side__block-price-area{
+        width: 50%;
+    }
+}
+
+@media(max-width:730px){
+    .filter-section{
+        .spare-part-left-side__block-list{
+            width: 100%;
+        }
+        .spare-part-left-side__block-button{
+            width: 90%;
+        }
+    }
+}
+
+
+
+@media(max-width:680px){
+    .filter-section .spare-part-left-side__block-slider{
+        width: 50%;
+    }
+    .filter-section .spare-part-left-side__block-price-area{
+        width: 80%;
+    }
+}
+
+
+@media(max-width:500px){
+    .filter-section .spare-part-left-side__block-slider{
+        width: 70%;
+    }
+    .filter-section .spare-part-left-side__block-price-area{
+        width: 90%;
+    }
+}
+
+@media(max-width:465px){
+    .filter-section{
+        .spare-part-left-side{
+            padding: 20px 10px 270px 10px;
+        }
+    }
+    .filter-section .spare-part-left-side__block-slider{
+        width: 60%;
+    }
+    .filter-section .spare-part-left-side__block-price-area{
+        width: 90%;
+    }
+}

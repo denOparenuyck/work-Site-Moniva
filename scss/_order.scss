@@ -1,0 +1,203 @@
+.order{
+    padding: 57px 0 52px;
+    background-image: url(../images/order-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: 2;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(45, 16, 61, 0.8);
+        z-index: -1;
+    }
+}
+
+
+.order-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-text {
+    color: #fff;
+}
+.order-text__title {
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 15px;
+}
+.order-text__description {
+    font-family: "FiraSans-ExtraBold";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    max-width: 288px;
+}
+.order-contact__item {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    padding: 10px 29px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 29px;
+    margin-bottom: 22px;
+
+    &::placeholder{
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+    }
+}
+.order-contact__file {
+    display: none;
+}
+.order-contact__file-style {
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    color: #fff;
+    padding: 13px 52px 13px 18px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        background-image: url(../images/order-icon-1.svg);
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+
+    }
+}
+
+.order-contact__inner{
+    display: flex;
+    align-items: center;
+}
+
+.order-contact__btn {
+    padding: 14px 12px;
+    display: block;
+    margin-right: 30px;
+}
+
+
+.order-contact__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+.order-contact__checkbox {
+    display: none;
+
+    &:checked + .order-contact__checkbox--fake::before{
+        opacity: 1;
+    }
+}
+
+.order-contact__checkbox--fake{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    margin-right: 16px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/order-icon-2.svg);
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: .2s;
+    }
+}
+
+.order-contact__checkbox-style {
+    font-size: 13px;
+    line-height: 15px;
+    width: 286px;
+    color: #fff;
+    cursor: pointer;
+    span{
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+@media(max-width:1180px){
+    .order-wrapper{
+        flex-direction: column;
+    }
+    .order-text,.order-text__title,.order-text__description{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .order-text__description{
+        max-width: 100%;
+    }
+}
+
+@media(max-width:800px){
+    .order-contact{
+        width: 90%;
+    }
+    .order-contact__form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .order-contact__item{
+        margin: 0 0 20px 0;
+    }
+    .order-contact__file-style{
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .order-contact__inner{
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:600px){
+    .order-contact__inner{
+        flex-direction: column;
+    }
+    .order-contact__btn{
+        margin: 0 auto 20px;
+    }
+    .order-contact__checkbox-wrapper{
+        margin-right: auto;
+    }
+    .order-contact__checkbox-style{
+        width: 100%;
+    }
+}

@@ -1,0 +1,315 @@
+.header{
+    padding: 57px 0 119px 0;
+    background-image: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color:#2D103D;
+        opacity: 0.8;
+        z-index: -1;
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 109px;
+}
+.header-navigation {
+    display: flex;
+    flex-direction: column;
+}
+.header-navigation__menu-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-navigation__menu-list-item:not(:first-child) {
+    margin-left: 29px;
+}
+.header-navigation__menu-list-link {
+    font-family: "FiraSans-ExtraBold";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.header-navigation__search-area {
+    background-color: transparent;
+    border: 1px solid #b89c52;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 83%;
+    outline: none;
+    margin-right: 20px;
+    font-family: "Roboto-Light";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+
+    &::placeholder{
+        font-family: "Roboto-Light";
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+    }
+}
+.header-navigation__search-btn {
+    padding: 11px 20px;
+}
+
+.header-info__list-item {
+    display: flex;
+    align-items: center;
+
+    & + & {
+        margin-top: 8px;
+    }
+}
+.header-info__list-icon {
+    margin-right: 6px;
+}
+.header-info__list-link,.header-info__list-timetable,.header-basket__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+}
+.header-info__list-link--phone{
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #b89c52;
+}
+
+
+.header-info__icon{
+    display: none;
+}
+
+
+
+.header-basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-basket__icon {
+    margin-bottom: 8px;
+}
+
+
+
+.header-menu__icon{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.header-hero-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-hero-description {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 85px;
+}
+.header-hero-description__text {
+    width: 305px;
+    line-height: 150%;
+    color: #fff;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #ffff;
+}
+.header-hero-description__title {
+    width: 744px;
+    font-size: 36px;
+    line-height: 43px;
+    color: #ffff;
+    font-weight: 300;
+
+
+    span{
+        font-family: "FiraSans-SemiBold";
+        font-weight: 600;
+    }
+}
+.header-hero-contact {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.69);
+    border-radius: 5px;
+    padding: 35px 51px 25px 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-hero-contact__text {
+    width: 315px;
+    font-family: "FiraSans-ExtraBold";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #502f5a;
+}
+.header-hero-contact__form {
+    input{
+        padding: 15px 10px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #1f1a17;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+}
+.header-hero-contact__form-name,.header-hero-contact__form-number {
+    margin-right: 37px;
+    margin-bottom: 14px;
+}
+.header-hero-contact__form-btn {
+    padding: 16px 10px;
+}
+
+.header-hero-contact__form-checkbox-text {
+    margin-left: 18px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #502f5a;
+}
+
+
+
+@media(max-width:1250px){
+    .header-info__list{
+        display: none;
+    }   
+    .header-info__icon{
+        display: block;
+        cursor: pointer;
+    }
+    .header-hero-contact{
+        border-radius: 0;
+    }
+}
+
+@media(max-width:1113px){
+    .header-hero-description{
+        flex-direction: column;
+    }
+    .header-hero-description__text,.header-hero-description__title{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .header-hero-description__text{
+        margin-bottom: 40px;
+    }
+
+    .header-hero-contact{
+        flex-direction: column;
+    }
+    .header-hero-contact__text{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:1050px){
+    .header{
+        padding-top: 20px;
+    }
+    .header-wrapper{
+        margin-bottom: 33px;
+        align-items: center;
+    }
+    .header-navigation{
+        display: none;
+    }
+    .header-navigation__search--responsive{
+        display: block;
+        width: 90%;
+        margin-bottom: 77px;
+    }
+    .header-menu__icon{
+        display: block;
+    }
+    .header-basket__text{
+        display: none;
+    }
+}
+
+
+@media(max-width:800px){
+    .header-hero-contact__form{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-hero-contact__form-name, .header-hero-contact__form-number {
+        margin-right: 0px;
+        margin-bottom: 14px;
+    }
+    .header-hero-contact__form-btn{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:766px){
+    .header-navigation__search--responsive{
+
+        .header-navigation__search-area{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width:460px){
+    .header-hero-description__title{
+        font-size: 30px;
+    }
+    .header-hero-contact{
+        padding: 20px 10px;
+    }
+}
+
+
+
+
+
+
+@media(max-width:360px){
+    .header-logo__img{
+        width: 100px;
+    }
+}

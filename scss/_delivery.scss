@@ -1,0 +1,108 @@
+.delivery{
+    padding: 94px 0 134px;
+    background:url(../images/delivery-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;   
+}
+
+.delivery-description {
+    text-align: center;
+    margin-bottom: 110px;
+}
+.delivery-description__title {
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: #502f5a;
+}
+.delivery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.delivery-opportunity__boxs {
+    position: relative;
+}
+.delivery-opportunity__box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    & + & {
+        margin-top: 68px;
+    }
+
+    &:nth-child(2), &:nth-child(3){
+        transform: translateX(67px);
+    }
+
+    &:nth-child(4){
+        transform: translateX(10px);
+    }
+}
+.delivery-opportunity__box-icon {
+    background-color:#502f5a ;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.delivery-opportunity__box-text {
+    max-width: 250px;
+}
+
+.delivery-opportunity__arc{
+    position: absolute;
+    z-index: 1;
+    top: -41px;
+    right: 221px;
+    width: 475px;
+    height: 537px;
+    border-radius: 0px 500px 500px 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid #502f5a;
+}
+
+
+
+@media(max-width:1250px){
+    .delivery-wrapper{
+        flex-direction: column;
+    }
+    .delivery-opportunity__boxs{
+        width: 100%;
+    }
+    .delivery-opportunity__box{
+        justify-content: flex-start;
+    }
+    .delivery-opportunity__box-icon{
+        flex: 0 0 auto;
+    }
+    .delivery-opportunity__box-text{
+        max-width: 100%;
+    }
+    .delivery-opportunity__box:nth-child(2), .delivery-opportunity__box:nth-child(3),.delivery-opportunity__box:nth-child(4) {
+        transform: translateX(0);
+    }
+    .delivery-opportunity__arc{
+        display: none;
+    }
+}
+@media(max-width:730px){
+    .delivery-description{
+        margin-bottom: 48px;
+    }
+    .delivery-opportunity__img{
+        img{
+            width: 100%;
+        }
+    }
+}

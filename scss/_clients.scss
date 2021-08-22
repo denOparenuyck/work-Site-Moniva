@@ -1,0 +1,46 @@
+.clients{
+    padding: 62px 0 84px;
+    background-color: #f3f3f3;
+}
+
+
+.clients__title{
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: #1f1a17;
+    margin-bottom: 50px;
+    text-align: center;
+    span{
+        color: #b89c52;
+    }
+}
+
+.clients-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &__item + &__item{
+        margin-left: 60px;
+    }
+}
+
+@media(max-width:560px){
+    .clients-list{        
+        &__item + &__item{
+            margin-left: 20px;
+        }
+    }
+}
+
+@media(max-width:400px){
+    .clients-list{
+        flex-direction: column;
+        &__item{
+            margin-top: 20px;
+        }
+    }
+}

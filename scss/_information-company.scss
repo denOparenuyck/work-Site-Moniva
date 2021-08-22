@@ -1,0 +1,109 @@
+.information-company{
+    padding: 110px 0 116px;
+}
+
+
+.information-company__inner{
+    max-width: 1980px;
+    margin: 0 auto;
+}
+.information-company__wrapper{
+    position: relative;
+}
+
+
+.information-company-bg{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 50%;
+    img{
+        width: 100%;
+    }
+}
+
+.information-company__description {
+    margin-bottom: 192px;
+    width: 31.5%;
+}
+.information-company__description-title {
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: #502f5a;
+    margin-bottom: 45px;
+}
+.information-company__description-text {
+    font-size: 20px;
+    line-height: 135.69%;
+    color: #000000;
+
+    & + & {
+        padding-top: 37px;
+    }
+}
+.information-company__worker {
+    display: flex;
+    align-items: center;
+}
+.information-company__worker-img {
+    margin-right: 105px;
+}
+.information-company__worker-data {
+    width: 22.07%;
+}
+.information-company__worker-data-name {
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: #502f5a;
+    margin-bottom: 26px;
+}
+.information-company__worker-data-position {
+    font-family: "FiraSans-ExtraBold";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1f1a17;
+
+}
+
+
+
+
+@media(max-width:1230px){
+    .information-company__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .information-company__description{
+        width: 100%;
+    }
+
+    .information-company-bg{
+        position: static;
+        width: 100%;
+    }
+}
+
+
+@media(max-width:900px){
+    .information-company__worker{
+        flex-direction: column-reverse;
+    }
+    .information-company__worker-img{
+        margin-right: 0;
+        img{
+            width: 100%;
+        }
+    }
+    .information-company__worker-data{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,126 @@
+.foundation {
+    position: relative;
+    z-index: 2;
+    margin-top: -500px;
+    padding-bottom: 200px;
+}
+.foundation-wrapper {
+    padding: 66px 155px 198px 136px;
+}
+
+.foundation__title {
+    font-family: "FiraSans-Medium";
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: #502f5a;
+    margin-bottom: 35px;
+}
+
+.foundation-inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.foundation-description{
+    position: relative;
+}
+.foundation-description__text {
+    font-size: 20px;
+    line-height: 135.69%;
+    color: #000000;
+}
+.foundation-description__icon:nth-child(2) {
+    margin-top: 53px;
+}
+.foundation-description__icon:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+}   
+.foundation-image__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+}
+.foundation-image__list-item {
+    & + & {
+        margin-left: 47px;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+@media(max-width:1370px){
+    .foundation-inner{
+        flex-wrap: wrap;
+    }
+    .foundation-description__icon{
+        margin-top: 20px;
+        img{
+            margin: 0 auto;
+        }
+    }
+    .foundation-description__icon:nth-child(3) {
+        position: static;
+        transform: translateX(0%);
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media(max-width:1230px){
+    .foundation {
+        padding-bottom: 906px;
+    }
+    .foundation-image__list{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        bottom: 29px;
+        z-index: -1;
+    }
+    .foundation-image__list-item{
+        & + & {
+            margin:0px 0 0 0;
+        }
+    }
+}
+
+@media(max-width:900px){
+    .foundation-wrapper {
+        padding: 20px 10px;
+    }
+    .foundation-description__icon{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:390px){
+    .foundation-image__list{
+        bottom: 183px;
+    }
+    .foundation-image__list-item{
+        width: 300px;
+    }
+}
+
+@media(max-width:330px){
+    .foundation-image__list{
+        bottom: 203px;
+    }
+    .foundation-image__list-item{
+        width: 290px;
+    }
+}

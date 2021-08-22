@@ -1,0 +1,121 @@
+.premium{
+    padding: 78px 0 102px;
+    background-image: url(../images/premium-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.premium-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.premium-description {
+    margin-bottom: 90px;
+    display: flex;
+    align-items: flex-end;
+}
+.premium-description__text {
+    font-family: "FiraSans-ExtraBold";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.premium-advantages-cards__first,.premium-advantages-cards__second {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1083px;
+    margin: 0 auto;
+}
+
+.premium-advantages-cards__second {
+    margin-top: 35px;
+    background: rgba(45, 16, 61, 0.5);
+    border-radius: 5px;
+    padding: 38px 39px 15px 33px;
+}
+.premium-advantages-card {
+    max-width: 309px;
+}
+.hide--card{
+    display: none;
+}
+
+
+.premium-advantages-card__img {
+    margin-bottom: 18px;
+}
+.premium-advantages-card__text {
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    span{
+        font-family: "Roboto-Medium";
+    }
+}
+
+
+
+
+
+@media(max-width:1120px){
+    .premium-advantages-cards__first,.premium-advantages-cards__second{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .premium-advantages-card__img{
+        img{
+            width: 100%;
+        }
+    }
+    .premium-advantages-cards{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .premium-advantages-cards__first{
+        flex-direction: column;
+    }
+    .premium-advantages-cards__second {
+        flex-direction: column;
+        padding: 0;
+        background-color: transparent;
+        margin: 0;
+    }
+    .premium-advantages-card{
+        margin: 0px 20px 20px 20px;
+        min-height: 250px;
+        height: 100%;
+    }
+}
+
+
+@media(max-width:660px){
+    .premium-description{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    // .premium-description__logo{
+    //     width: 100%;
+    //     margin: 0 auto;
+    // }
+}
+
+@media(max-width:481px){
+    .premium-advantages-card{
+        min-height: 280px;
+        height: 100%;
+    }
+}
+
+@media(max-width:380px){
+    .premium-advantages-cards{
+        flex-direction: column;
+    }
+}

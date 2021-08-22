@@ -1,0 +1,51 @@
+.pop-up{
+    background: rgba(38, 12, 46, 0.9);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+
+    transform: translateY(100%);
+    transition: 0s;
+    .header-hero-contact__form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 46px 65px 43px;
+    }
+    .header-hero-contact__form-name,.header-hero-contact__form-number {
+        margin-right: 0;
+    }
+    .header-hero-contact__text{
+        margin-bottom: 30px;
+    }
+}
+.pop-up--active{
+    transform: translateY(0);
+    transition: transform 1s;
+
+}
+
+.pop-up__body{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+.pop-up__close{
+    position: absolute;
+    top: -77px;
+    right: 0;
+    cursor: pointer;
+}
+
+
+@media(max-width:400px){
+    .pop-up .header-hero-contact__form {
+        padding: 20px 10px;
+    }
+}
